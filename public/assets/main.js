@@ -10,6 +10,7 @@ const getSongs = async () => {
   }
 };
 getSongs();
+
 let NEXT = document.getElementById("next-song");
 NEXT.addEventListener("click", (e) => {
   let songName = document.getElementById("song-name");
@@ -22,7 +23,9 @@ NEXT.addEventListener("click", (e) => {
     songDescp.innerHTML = songs[current].description;
     current = 0;
     CurrentElement.value = current;
+
   } else {
+    
     songName.innerHTML = songs[current].name;
     songDescp.innerHTML = songs[current].description;
     current = current + 1;

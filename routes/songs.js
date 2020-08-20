@@ -1,14 +1,7 @@
 const router = require("express").Router();
 const fs = require('fs');
 
-// @route        POST   songs/
-// @description     dump songs to db
-// @access          Public
 
-
-// @route        GET   songs/
-// @description     dump songs to db
-// @access          Public
 router.get("/", async (req, res) => {
   try {
     const songs = await Song.find({});
@@ -21,6 +14,7 @@ router.get("/", async (req, res) => {
 
 router.get("/get", async (req, res) => {
   try {
+    //Just Basic Description
     let songs = [
       {
         name: "Artist Name 1234",
